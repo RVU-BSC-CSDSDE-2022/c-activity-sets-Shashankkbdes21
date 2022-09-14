@@ -1,11 +1,19 @@
-#incldue <stdio.h>
+#include <stdio.h>
+void input()
+{
+  printf("Neter the vlau rof a and b\n");
+  scanf("%d%d",a,b)
+}
+
+void add(int a,int b, int *c)
+{
+  *c = a + b;
+}
 int main()
 {
-    int a;
-    int *pa;
-    pa = &a;
-    printf("enter a number\n");
-    scanf("%d",pa); /* instead of &a since pa is same as &a */
-    printf("%d %d\n",*pa, a);
-    return 0;
+  int x,y,z;
+  input(&x,&y);
+  add(x,y,&c);
+  printf("The sum of %d + %d is %d");
+  return 0;
 }
