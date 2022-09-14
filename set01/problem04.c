@@ -1,7 +1,7 @@
 #include <stdio.h>
 void input()
 {
-  printf("Neter the vlau rof a and b\n");
+  printf("Neter the value rof a and b\n");
   scanf("%d%d",a,b)
 }
 
