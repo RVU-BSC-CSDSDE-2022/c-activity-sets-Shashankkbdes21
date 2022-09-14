@@ -1,8 +1,8 @@
 #include <stdio.h>
-void input()
+void input(int *a,int *b)
 {
-  printf("Neter the value rof a and b\n");
-  scanf("%d%d",a,b)
+  printf("Enter the value of a and b\n");
+  scanf("%d%d",a,b);
 }
 
 void add(int a,int b, int *c)
@@ -13,7 +13,7 @@ int main()
 {
   int x,y,z;
   input(&x,&y);
-  add(x,y,&c);
-  printf("The sum of %d + %d is %d");
+  add(x,y,&z);
+  printf("The sum of %d + %d is %d\n",x,y,z);
   return 0;
 }
