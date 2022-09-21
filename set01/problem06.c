@@ -1,32 +1,26 @@
 #include <stdio.h>
-int largest(int a, int b)
+void input(int *a,int *b,int *c)
 {
-  if (a>b){
+  printf("Enter 3 numbers\n");
+  scanf("%d %d %d",a,b,c);
+}
+int largest(int a,int b,int c)
+{
+  if(a>b && a>c){
     return a;
+    }
+  else if(b>a && b>c){
+    return b;
+    }
+  else{
+    return c;
   }
 }
-if (a<b){
-  return b;
-}
-	else {
-		return a; 
-	}
-}
-
-int largest(int a, int b)
+int main()
 {
-	if (a > b)
-	{
-		return a;
-	}
-	return b;
+  int e,f,g,h;
+  input(&e,&f,&g);
+  h = largest(e,f,g);
+    printf("largest number among %d,%d and %d is %d",e,f,g,h);
+  return 0;
 }
-
-
-int largest(int a, int b)
-{
-	if (a > b)
-		return a;  /* if it is only one statement you do not need { }
-	return b;
-}
-

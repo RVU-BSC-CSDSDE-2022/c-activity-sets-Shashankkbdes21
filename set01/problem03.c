@@ -24,3 +24,11 @@ z=find_sum(x,y);
   (x,y,z);
   return 0;
 }
+
+  int x,y,z
+x=output();
+y=output();
+z=find_sum(x,y);
+  (x,y,z);
+  return 0;
+}

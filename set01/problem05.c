@@ -1,27 +1,30 @@
 #include <stdio.h>
-void input(int *a,int *b,int *c)
+int input()
 {
-  printf("Enter three numbers\n");
-  scanf("%d%d%d",a,b,c);
+  int a;
+  printf("Enter the number\n");
+  scanf("%d",&a);
+  return a;
 }
-
-int find_largest(int a,int b, int c)
+int largest(int a,int b,int c)
 {
-  if(a > b && a > b && a >c){
+  if(a>b && a>c)
     return a;
-  }
-  else if(b > a && b > c){
+
+  else if(b>a && b>c)
     return b;
-  }
-  else{
+      
+  else
     return c;
-  }
+  
 }
 int main()
 {
-  int x,y,z,largest;
-  input(&x,&y,&z);
-  largest= find_largest(x,y,z);
-  printf("The largest from %d,%d and %d is %d",x,y,z,largest);
+  int e,f,g,h;
+  e=input;
+  f=input;
+  g=input;
+  h=largest(e,f,g);
+  printf("The largest from %d, %d and %d is %d\n",e,f,g,h);
   return 0;
 }
