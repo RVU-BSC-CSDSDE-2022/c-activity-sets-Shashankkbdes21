@@ -16,7 +16,7 @@ int sum_n_nos(int n)
 void output(int n,int sum)
 {
   for( int i=1; i<=n; i++);
-  printf("%d =",i);
+  printf("%d =",&i);
     scanf("%d=%d",int n,int sum);
 }
 int main()

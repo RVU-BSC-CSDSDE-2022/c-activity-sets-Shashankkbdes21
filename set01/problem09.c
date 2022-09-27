@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <math.h>
-
-float input()
+int main()
 {
-  float n;
-  printf("Enter the number\n");
-  scanf("%d",&n);
-}
-float square_root(float n)
-{
-  float 
+  float a,s;
+  printf("Enter one number\n");
+  scanf("%f",&a);
+  s=sqrt(a);
+  printf("square root is %f\n",s);
+  return 0;
 }
