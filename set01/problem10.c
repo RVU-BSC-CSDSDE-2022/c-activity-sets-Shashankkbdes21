@@ -5,9 +5,9 @@
 void input_two_strings(char *string1[20], char *string2[20])
 {
   printf("Enter a first string :");
-scanf("%s",char *string1);
+scanf("%s",string1);
 printf("Enter a second string :");
-scanf("%s",char *string2);
+scanf("%s",string2);
 }
 
 int stringcompare(char *string1, char *string2)
@@ -19,10 +19,18 @@ int stringcompare(char *string1, char *string2)
       {
         return 1;
       }
-      if(string1[i] > string2[i])
+      else if(string1[i] > string2[i])
       {
         return -1;
-      }
     }
+  return 0;
+}
+int main()
+{
+  int a;
+  char s1[20], s2[20];
+  input_two_strings(&s1 ,&s2);
+  a = stringcompare(&s1,&s2);
+  printf("The result is %d\n",a);
   return 0;
 }

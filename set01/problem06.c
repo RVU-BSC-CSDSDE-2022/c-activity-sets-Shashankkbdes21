@@ -21,6 +21,6 @@ int main()
   int e,f,g,h;
   input(&e,&f,&g);
   h = largest(e,f,g);
-    printf("largest number among %d,%d and %d is %d",e,f,g,h);
+    printf("largest number among %d,%d and %d is %d\n",e,f,g,h);
   return 0;
 }

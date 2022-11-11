@@ -251,7 +251,7 @@ Complex input_complex();
 void input_n_complex(int n, Complex c[n]);
 Complex add(Complex a, Complex b);
 Complex add_n_complex(int n, Complex c[n]);
-void output(int n, Complex c[n], Complex result);
+ ;
 ```
 
 ***Input***
