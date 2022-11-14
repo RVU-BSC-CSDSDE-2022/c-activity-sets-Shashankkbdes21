@@ -1,32 +1,33 @@
 #include <stdio.h>
-struct Complex {
-float real;
-float imaginary;
-};
-typedef struct Complex Complex;
-Complex input()
+typedef struct _complex 
 {
-  complex a;
-  printf("Enter the real and imaginary part of the Complex number:")
-    scanf("%f%f",&a.real,&a.imaginary);
-  return a;
-}
-Complex add(Complex a,Complex b)
+	float real;
+	float imaginary;
+}Complex;
+// typedef struct _complex Complex;
+Complex input_complex()
 {
   Complex c;
-  c.real = a.real + a.imaginary;
-  return c;
+  printf("Enter real and imaginary parts of complex number\n");
+	scanf("%f%f",&c.real,&c.imaginary);
+	return c;
 }
-void output(Complex a,Complex b,Complex c)
+Complex add_complex(Complex a, Complex b)
 {
-  printf("The sum of %f+i+f and %f+i%f is %f+i%f\n"a.real,a.imaginary,b.real,b.imaginary,c.real,c.imaginary);
+  Complex c;
+	c.real = a.real + b.real;
+	c.imaginary = a.imaginary + b.imaginary;
+	return c;
+}
+void output(Complex x, Complex y, Complex sum)
+{
+  printf("(%f + i %f) + (%f + i %f) is (%f + i%f)\n",x.real, x.imaginary, y.real, y.imaginary, sum.real, sum.imaginary); 
 }
 int main()
 {
-  Complex a,b,c;
-  a=input();
-  b=input();
-  c=add(a,b);
-  output(a,b,c);
-  return 0;
+	Complex a,b,c;
+	a= input_complex();
+	b= input_complex();
+	c= add_complex(a,b);
+	output(a,b,c);
 }
