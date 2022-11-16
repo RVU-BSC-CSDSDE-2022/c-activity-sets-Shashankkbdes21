@@ -15,6 +15,7 @@ Camel input();
 }
 float find_weight(Camel c);
 {
-  
+ weight = pi * stomach_radius^3 * sqrt(height * length) 
+
 }
 void output(Camel c);
