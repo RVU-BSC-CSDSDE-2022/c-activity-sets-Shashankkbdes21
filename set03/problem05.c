@@ -1,42 +1,50 @@
 #include<stdio.h>
 int input()
 {
-  int a,b;
-  printf("Enter the two numbers:\n");
-  scanf("%d %d",&a,&b);
-  return a,b;
+  int n;
+  printf("Enter the value of n:\n");
+  scanf("%d",&n);
+  return n;
 }
 int find_gcd(int a, int b)
 {
-    int min = (a<b) || a || b;
-    int gcd=1;
-    for(int i=1; i<=min; i++)
+  int dividn, div, rem=-1, gcd;
+    if(a>b)
     {
-        if(a%i==0 && b%i==0)
-        {
-            gcd = i;
-        }
+      dividn=a;
+      div=b;
     }
-    return gcd;
+  else
+    {
+      dividn=b;
+      div=a;
+    }
+  rem=(dividn)%(div);
+  if(rem==0)
+    gcd=div;
+  else
+  {
+    while(rem!=0)
+      {
+        div=rem;
+        dividn=div;
+        rem=(dividn)%(div);
+      }
+    gcd=div;
+  }
+  return gcd;
 }
 void output(int a, int b, int gcd)
 {
-  printf("The HCF of %d and %d is %d\n");
+  printf("The gcd of %d and %d is %d\n",a,b,gcd);
 }
 int main()
 {
- int a,b;
-	
-	a = 40, b = 10;
-	printf(" Using iterative Approach : \n");
-	printf(" HCF of %d and %d = %d\n", a, b,gcd(a, b));
-
-	a = 36, b = 60;
-	printf(" HCF of %d and %d = %d\n", a, b,gcd(a, b));
-
-	a = 24, b = 12;
-	printf(" HCF of %d and %d = %d\n", a, b,gcd(a, b));
-	return 0;
-  
+ int a,b,gcd=0;
+  a=input();
+  b=input();
+  gcd=find_gcd(a,b);
+  output(a,b,gcd);
+  return 0;
 }
 

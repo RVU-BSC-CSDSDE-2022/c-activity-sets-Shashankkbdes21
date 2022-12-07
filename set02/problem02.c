@@ -21,6 +21,10 @@ void input_camel_details(float *radius,float *height,float *length)
     return weight;
     //weight = pi * stomach_radius^3 * sqrt(height * length)
   }
+void output(float radius, float height, float length, float weight)
+{
+  printf("The weight of the camel with %f, %f and %f is %f\n",radius, height, length);
+}
   
   int main()
   {

@@ -11,6 +11,8 @@ int isc(int n)
   for(int i=2;i<n;i++)   
     if(n %i == 0)
     return 1;
+  else
+      return 0;
 }
 void output(int n, int isc)
 {
@@ -23,7 +25,7 @@ int main()
 {
   int n, isc;
   n = input_number();
-  isc=is_composite(n);
+  isc = is_composite(n);
   output(n,isc);
   return 0;
 }
